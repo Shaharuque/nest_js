@@ -1,0 +1,4 @@
+to run npm run start:dev
+to create a new module: nest g module users
+to create controller : nest g controller users
+to create service: nest g service users
