@@ -2,3 +2,13 @@ to run npm run start:dev
 to create a new module: nest g module users
 to create controller : nest g controller users
 to create service: nest g service users
+## For data validation and transformation we can use Pipes
+custom pipe can be made by using the following command
+nest g pipe common/pipes/validation.pipe
+
+## importance of Pipe: it maintains single responsibilty principle
+Why use single responsibility?
+By having a single responsibility for each component, you can isolate the impact of changes and reduce the risk of breaking other parts of the system. You can also follow the open-closed principle, which states that your components should be open for extension but closed for modification
+
+## installing mongoose
+npm i --save @nestjs/mongoose mongoose
