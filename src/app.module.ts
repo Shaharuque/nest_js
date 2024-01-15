@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -12,10 +13,11 @@ import { ConfigModule } from '@nestjs/config';
       envFilePath: '.env',
       isGlobal: true,
     }),
-    UsersModule,
     MongooseModule.forRoot(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.yz2oh.mongodb.net/nest_db?retryWrites=true&w=majority`,
     ),
+    UsersModule,
+    PostsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

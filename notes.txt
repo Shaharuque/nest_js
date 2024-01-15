@@ -12,3 +12,6 @@ By having a single responsibility for each component, you can isolate the impact
 
 ## installing mongoose
 npm i --save @nestjs/mongoose mongoose
+
+## dto=>used for data validation . when data comes from client to server or server to server
+also install 2 packages: class-validator and class-transformer
