@@ -15,3 +15,6 @@ npm i --save @nestjs/mongoose mongoose
 
 ## dto=>used for data validation . when data comes from client to server or server to server
 also install 2 packages: class-validator and class-transformer
+when to use dto => basically when want to post then we can use dto
+
+## Schema referencing. creating relationship between 2 schemas

@@ -85,6 +85,9 @@ export class UsersController {
     if (!findUser) throw new HttpException('User not found', 404);
 
     const deleteUser =await this.usersService.deleteUser(id);
+
+    if(!deleteUser) throw new HttpException('User not deleted', 500);
+    
     return {
       success:true,
       data:deleteUser
