@@ -38,7 +38,7 @@ export class UsersService {
   }
 
   getUserById(id: string) {
-    return this.userModel.findById(id);
+    return this.userModel.findById(id).populate('settings',"-createdAt -updatedAt -__v ");
   }
 
   updateUser(id: string, body: UpdateUserDto) {
