@@ -34,7 +34,7 @@ export class UsersService {
   }
 
   getUsers() {
-    return this.userModel.find().populate('settings',"-createdAt -updatedAt -__v ");
+    return this.userModel.find().populate('settings',"-createdAt -updatedAt -__v ").populate('posts',"-createdAt -updatedAt -__v ");
   }
 
   getUserById(id: string) {
